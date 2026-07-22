@@ -69,27 +69,10 @@ export const Todo = () => {
     setIsEditing(true);
   };
 
-  const handleLogout = async () => {
-    try {
-      await api.post("/auth/logout");
-
-      navigate("/", { replace: true });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-r from-green-600 to-green-200 flex justify-center py-10">
+    <div className="h-150  flex justify-center py-5">
       <div className="w-full max-w-2xl rounded-lg bg-white p-8 shadow-xl">
         <header className="relative mb-8">
-          <button
-            onClick={handleLogout}
-            className="absolute right-0 top-0 rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-600"
-          >
-            Logout
-          </button>
-
           <div className="text-center">
             <h1 className="text-4xl font-bold text-green-600">My Tasks</h1>
             <p className="mt-2 text-gray-500">
