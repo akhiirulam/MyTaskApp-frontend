@@ -1,10 +1,14 @@
 import React from "react";
-import { Todo } from "../components/Todo.jsx";
+import Navbar from "../components/Navbar";
+import { Todo } from "../components/Todo";
 
-export function Signup() {
+export function TodoPage() {
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-r from-green-600 to-green-200">
-      <Todo />
+    <div>
+      <Navbar />
+      <div className="min-h-screen bg-gradient-to-r from-green-600 to-green-200 flex justify-center py-10">
+        <Todo />
+      </div>
     </div>
   );
 }

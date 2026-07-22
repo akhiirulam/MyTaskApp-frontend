@@ -21,7 +21,7 @@ const LoginForm = () => {
       const response = await api.post("/auth/login", formData);
 
       alert(response.data.message);
-      navigate("/todos");
+      navigate("/dashboard");
     } catch (error) {
       console.log(error);
       console.log(error.response);
